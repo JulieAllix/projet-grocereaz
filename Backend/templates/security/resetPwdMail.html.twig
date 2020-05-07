@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Réinisialisation Mot de passe</title>
+	</head>
+	{% apply inline_css %}
+	<style>
+		
+		body{
+            background-color:#E38038;
+           /*background-image:url("./images/abricots.png");*/
+             color:#fff;
+             }          
+		h2 {
+			color: #253f58;
+			font-size: 25px
+		}
+		p {
+			font-size: 15px;
+		}
+		strong {
+			color: #253f58;
+			font-size: 15px;
+		}
+	</style>
+	<body>
+		<div>
+			<h2>Grocereaz - reinitialisation du mot de passe</h2>
+			<p>
+				<strong>{{user.firstname}}
+					{{user.lastname}}</strong>Pour réinisialisez votre mot de passe merci de cliquer sur le lien suivant :
+			</p>
+			<p>
+				<a href="http://ec2-3-95-187-31.compute-1.amazonaws.com/reset-pwd/{{token}}">reset password</a>
+			</p>
+			<p style="font-size: 15px;">L'Equipe de Grocereaz.</p>
+		</div>
+	</body>
+	{% endapply %}
+
+</html>
